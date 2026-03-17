@@ -1,5 +1,11 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import prisma from "@/lib/database";
+import { cn } from "@/lib/utils";
 
-export default function Home() {
-  return (<div className="text-red-500">hello</div>);
+export default async function Home() {
+  const users = await prisma.user.findMany();
+
+  return <div className={cn("text-red-500 font-bold")}>hello
+  <Button variant="outline">{JSON.stringify(users)}</Button>
+  </div>;
 }
