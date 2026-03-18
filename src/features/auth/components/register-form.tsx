@@ -79,10 +79,12 @@ export default function RegisterForm() {
                     >
                         <div className="flex flex-col gap-6">
                             <Button variant={'outline'} className='w-full' type="button">
-                                Continue with github
+                            <Image alt="github" src={"/logos/github.svg"} width={20} height={20}/>
+                                Continue with Github
                             </Button>
                             <Button variant={'outline'} className='w-full' type="button">
-                                Continue with google
+                            <Image alt="google" src={"/logos/google.svg"} width={20} height={20}/>
+                                Continue with Google
                             </Button>
                         </div>
                         {/* <FormField
